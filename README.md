@@ -1,0 +1,137 @@
+# terraform-aws-ssmdocument
+
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument)
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssmdocument.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument/releases/latest)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-ssmdocument.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument/releases/latest)
+![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
+[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-ssmdocument/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-ssmdocument&benchmark=CIS+AWS+V1.2)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
+[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-ssmdocument/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-ssmdocument&benchmark=INFRASTRUCTURE+SECURITY)
+
+Terraform module to provision an Bastion host.
+
+---
+
+It's 100% Open Source and licensed under the [APACHE2](LICENSE).
+
+## Introduction
+
+
+## Usage
+
+Include this repository as a module in your existing terraform code:
+
+```hcl
+module "ssmdocument" {
+  source            = "JamesWoolfenden/ssmdocument/aws"
+  version           = "0.1."
+}
+```
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_ssm_document.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_document) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| <a name="input_content"></a> [content](#input\_content) | n/a | `string` | `"  {
+    \"schemaVersion\": \"1.2\",
+    \"description\": \"Check ip configuration of a Linux instance.\",
+    \"parameters\": {
+
+    },
+    \"runtimeConfig\": {
+      \"aws:runShellScript\": {
+        \"properties\": [
+          {
+            \"id\": \"0.aws:runShellScript\",
+            \"runCommand\": [\"ifconfig\"]
+          }
+        ]
+      }
+    }
+  }
+"` | no |
+| <a name="input_document_format"></a> [document\_format](#input\_document\_format) | n/a | `string` | `"JSON"` | no |
+| <a name="input_document_name"></a> [document\_name](#input\_document\_name) | n/a | `string` | `"test_document"` | no |
+| <a name="input_document_type"></a> [document\_type](#input\_document\_type) | n/a | `string` | `"Command"` | no |
+
+## Outputs
+
+No outputs.
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Help
+
+**Got a question?**
+
+File a GitHub [issue](https://github.com/JamesWoolfenden/terraform-ssmdocument/issues).
+
+## Contributing
+
+### Bug Reports & Feature Requests
+
+Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-ssmdocument/issues) to report any bugs or file feature requests.
+
+## Copyrights
+
+Copyright � 2021 James Woolfenden
+
+## License
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+See [LICENSE](LICENSE) for full details.
+
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership. The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License. You may obtain a copy of the License at
+
+<https://www.apache.org/licenses/LICENSE-2.0>
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied. See the License for the
+specific language governing permissions and limitations
+under the License.
+
+### Contributors
+
+[![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]<br/>
+
+[jameswoolfenden_homepage]: https://github.com/jameswoolfenden
+[jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
+[github]: https://github.com/jameswoolfenden
+[share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-sns&url=https://github.com/JamesWoolfenden/terraform-aws-sns
+[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-sns&url=https://github.com/JamesWoolfenden/terraform-aws-sns
+[share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/terraform-aws-sns
+[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/JamesWoolfenden/terraform-aws-sns
+[share_email]: mailto:?subject=terraform-aws-sns&body=https://github.com/JamesWoolfenden/terraform-aws-sns
