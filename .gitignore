@@ -31,4 +31,3 @@ checksums.txt
 *.tar.gz
 original/
 .external_modules
-pipfile*
