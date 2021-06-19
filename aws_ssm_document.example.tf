@@ -15,7 +15,8 @@ variable "document_type" {
   type    = string
   default = "Command"
   validation {
-    condition = can(regex("Command|Session|Automation|Package|Policy", ))
+    condition     = can(regex("Command|Session|Automation|Package|Policy", var.document_type))
+    error_message = "Can only be one of Command|Session|Automation|Package|Policy."
   }
 }
 
@@ -23,8 +24,8 @@ variable "document_format" {
   type    = string
   default = "JSON"
   validation {
-    condition     = can(regex("JSON|YAML", var.document_type))
-    error_message = "Document format can be JSON or YAML"
+    condition     = can(regex("JSON|YAML", var.document_format))
+    error_message = "Document format can be JSON or YAML."
   }
 }
 
