@@ -29,16 +29,15 @@ module "ssmdocument" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                             | Version |
-| ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -46,17 +45,16 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                 | Type     |
-| -------------------------------------------------------------------------------------------------------------------- | -------- |
+| Name | Type |
+|------|------|
 | [aws_ssm_document.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_document) | resource |
 
 ## Inputs
 
-| Name                                                               | Description                                        | Type       | Default | Required |
-| ------------------------------------------------------------------ | -------------------------------------------------- | ---------- | ------- | :------: |
-| <a name="input_common_tags"></a> [common_tags](#input_common_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a     |   yes    |
-| <a name="input_content"></a> [content](#input_content)             | n/a                                                | `string`   | `" {    |
-
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| <a name="input_content"></a> [content](#input\_content) | n/a | `string` | `"  {
     \"schemaVersion\": \"1.2\",
     \"description\": \"Check ip configuration of a Linux instance.\",
     \"parameters\": {
@@ -72,14 +70,15 @@ No modules.
         ]
       }
     }
-
-}
-"`| no | | <a name="input_document_format"></a> [document\_format](#input\_document\_format) | n/a |`string`|`"JSON"`| no | | <a name="input_document_name"></a> [document\_name](#input\_document\_name) | n/a |`string`|`"test_document"`| no | | <a name="input_document_type"></a> [document\_type](#input\_document\_type) | n/a |`string`|`"Command"` | no |
+  }
+"` | no |
+| <a name="input_document_format"></a> [document\_format](#input\_document\_format) | n/a | `string` | `"JSON"` | no |
+| <a name="input_document_name"></a> [document\_name](#input\_document\_name) | n/a | `string` | `"test_document"` | no |
+| <a name="input_document_type"></a> [document\_type](#input\_document\_type) | n/a | `string` | `"Command"` | no |
 
 ## Outputs
 
 No outputs.
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Help
