@@ -132,7 +132,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-ssmd
 
 ## Copyrights
 
-Copyright � 2021-2022 James Woolfenden
+Copyright © 2021-2022 James Woolfenden
 
 ## License
 
