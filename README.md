@@ -101,14 +101,38 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "iam:PassRole"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
                 "ssm:CreateDocument",
                 "ssm:DeleteDocument",
                 "ssm:DescribeDocument",
                 "ssm:DescribeDocumentPermission",
                 "ssm:GetDocument",
-                "ssm:UpdateDocument"
+                "ssm:ListTagsForResource",
+                "ssm:UpdateDocument",
+                "ssm:UpdateDocumentDefaultVersion"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
