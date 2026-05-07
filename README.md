@@ -1,13 +1,11 @@
 # terraform-aws-ssmdocument
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssmdocument.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-ssmdocument.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-ssmdocument/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-ssmdocument/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-ssmdocument&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-ssmdocument/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-ssmdocument&benchmark=INFRASTRUCTURE+SECURITY)
 
 Terraform module to provision an Bastion host.
 
@@ -36,7 +34,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -46,13 +44,13 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_ssm_document.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_document) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
 | <a name="input_content"></a> [content](#input\_content) | n/a | `string` | `"  {
     \"schemaVersion\": \"1.2\",
